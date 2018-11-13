@@ -18,7 +18,7 @@ function init() {
 
   $.ajax({
     method: 'GET',
-    url: 'http://me.fellermoe.net/wp-json/wp-api-menus/v2/menus/2',
+    url: 'https://me.fellermoe.net/wp-json/wp-api-menus/v2/menus/2',
     dataType: 'json',
     success: function(data) {
 
