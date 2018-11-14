@@ -28,6 +28,11 @@ function init() {
 
       $('nav').html(menu).slideDown();
 
+      $('nav li a').click(function() {
+        getPage($(this).data("pgid"));
+      });
+      getPage(50);
+
       $("#loaderDiv").fadeOut("slow");
 
     },
@@ -52,7 +57,7 @@ function menuBuilder(obj) {
 
     obj.forEach(function(item) {
 
-      theMenu = theMenu + '<li><a href="#">' + item.title + '</a>';
+      theMenu = theMenu + '<li><a href="#" data-pgid="' + item.object_id + '">' + item.title + '</a>';
 
 
       if (item.children) {
@@ -74,4 +79,30 @@ function menuBuilder(obj) {
   }
 
   return theMenu;
+}
+
+function getPage(obj) {
+  $("#loaderDiv").fadeIn("slow");
+  $.ajax({
+    method: 'GET',
+    url: 'https://me.fellermoe.net/wp-json/wp/v2/pages/' + obj,
+    dataType: 'json',
+    success: function(data) {
+      var pgbuild = '';
+      pgbuild = '<section><div class="container">' + data.content.rendered + '</div></section>';
+      $("#content").fadeOut(function() {
+        $('html').animate({
+          scrollTop: 0
+        }, 'slow'); //IE, FF
+        $('body').animate({
+          scrollTop: 0
+        }, 'slow'); //chrome, don't know if Safari works
+        $(this).html(pgbuild).fadeIn();
+        $("#loaderDiv").fadeOut("slow");
+      });
+    },
+    error: function() {
+      console.log('bad');
+    }
+  });
 }

@@ -30,7 +30,7 @@
 
     <header>
       <div class="container clearfix">
-        <h1 id="logo">
+        <h1 id="logo" onClick="getPage(50)">
           inside out
         </h1>
         <nav>
@@ -42,50 +42,14 @@
       <div id="content">
         <section>
           <div class="container">
-            <h1>White Panel</h1>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-          </div>
-        </section>
-        <section class="color">
-          <div class="container">
-            <h1>Blue Panel</h1>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
-            <p>panel content</p>
+            <div class="circle">
+              <div class="wave">
+              </div>
+            </div>
           </div>
         </section>
       </div>
     </div><!-- #main -->
-
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -140,36 +104,38 @@
     <div class="copyright">
       <div class="container">
         <div class="row">
-        <div class="col-md-4">
-          <p>© 2018 - All Rights with me</p>
-        </div>
-        <div class="col-md-8">
-          <ul class="bottom_ul">
-            <li><a href="#">mysite.com</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Faq's</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Site Map</a></li>
-          </ul>
+          <div class="col-md-4">
+            <p>© 2018 - All Rights with me</p>
+          </div>
+          <div class="col-md-8">
+            <ul class="bottom_ul">
+              <li><a href="#">mysite.com</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Faq's</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Site Map</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- js used for header and body of page -->
-    <script src="assets/js/header-resize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <!-- js used for header and body of page -->
+      <script src="assets/js/header-resize.js"></script>
 
-    <!-- all JavaScript used in the app that is custom will come from the app.js file -->
-    <script src="assets/js/app.js"></script>
+      <!-- all JavaScript used in the app that is custom will come from the app.js file -->
+      <script src="assets/js/app.js"></script>
 
-    <div id="loaderDiv"></div>
-    <script>$("#loaderDiv").fadeIn("slow");</script>
+      <div id="loaderDiv"></div>
+      <script>
+        $("#loaderDiv").fadeIn("slow");
+      </script>
 
 </body>
 
